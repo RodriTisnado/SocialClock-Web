@@ -32,8 +32,27 @@
   </div>
 </nav>
 
+<section class="Inicio-section">
+  
+  <picture class="inicio-fondo-picture">
+    <source srcset="img/hero.webp" type="image/.png">
+    <img src="img/FondoPrincipalSocialClock.png" alt="Fondo Social Clock" class="inicio-fondo">
+  </picture>
 
-<section class="fondo-principal"></section>
+  <div class="Inicio-text">
+    <h1>Bienvenido a Social Clock</h1>
+    <p>
+      Social Clock es un sistema innovador diseñado para simplificar el registro de horas sociales y actividades académicas. 
+      Nuestra plataforma permite a los estudiantes y administradores llevar un control preciso, confiable y totalmente digital, 
+      eliminando la necesidad de procesos manuales. Con Social Clock, cada hora registrada cuenta, y cada usuario puede 
+      acceder a información clara y organizada en cualquier momento.
+    </p>
+  </div>
+</section>
+
+<!-- Aca iria otra imagen a la derecha o con el fondo complomentariamos el espacio vacio, pq mi idea era dejar el recuadro de texto a la izq y una imagen a la derecha. Salu2 -->
+
+
 
 <section class="bienvenida">
     <h1>Bienvenido a Social Clock</h1>
@@ -182,7 +201,7 @@
       if (target) {
         setTimeout(() => {
           target.scrollIntoView({ behavior: "smooth" });
-        }, 300); // pequeño delay para que cargue bien
+        }, 300); // delay
       }
     }
   });
