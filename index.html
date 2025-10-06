@@ -16,52 +16,47 @@
 </head>
 <body>
 
-<nav class="navbar navbar-light bg-white sticky-top shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
   <div class="container">
-
     <a class="navbar-brand" href="index.html">Social Clock</a>
 
-    <!-- Botón toggler tipo offcanvas -->
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Menú offcanvas desde la derecha -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="collapse navbar-collapse justify-content-end">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="./Pages/Nosotros.html">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="./Pages/Sistema.html">Sistema</a></li>
+        <li class="nav-item"><a class="nav-link" href="./Pages/Contactanos.html">Contáctanos</a></li>
+      </ul>
+    </div>
+
+    <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Social Clock</h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body" style="background-color: rgba(10,19,56,0.95) color #fff;">
+      <div class="offcanvas-body bg-dark text-white">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="Pages/Nosotros.html">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="Pages/Sistema.html">Sistema</a></li>
-          <li class="nav-item"><a class="nav-link" href="Pages/Contactanos.html">Contáctanos</a></li>
+          <li class="nav-item"><a class="nav-link text-white active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="./Pages/Nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="./Pages/Sistema.html">Sistema</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="./Pages/Contactanos.html">Contáctanos</a></li>
         </ul>
       </div>
     </div>
-
   </div>
 </nav>
+
 <section class="Inicio-section">
   <picture class="inicio-fondo-picture">
     <source srcset="img/hero.webp" type="image/.png">
-    <img src="img/FondoPrincipalSocialClock.png" alt="Fondo Social Clock" class="inicio-fondo">
+    <img src="img/encabezadoloSocialClockdefinitivo.png" alt="Fondo Social Clock" class="inicio-fondo">
   </picture>
-
-  <div class="Inicio-text">
-    <h1>Bienvenido a Social Clock</h1>
-    <p>
-      Social Clock es un sistema innovador diseñado para simplificar el registro de horas sociales y actividades académicas. 
-      Nuestra plataforma permite a los estudiantes y administradores llevar un control preciso, confiable y totalmente digital, 
-      eliminando la necesidad de procesos manuales. Con Social Clock, cada hora registrada cuenta, y cada usuario puede 
-      acceder a información clara y organizada en cualquier momento.
-    </p>
-  </div>
 </section>
-
 
 <section class="bienvenida">
     <h1>Bienvenido a Social Clock</h1>
@@ -160,34 +155,41 @@
 
 <div class="separador-testimonios"></div>
 
-<footer class="site-footer">
-    <div class="container">
-        <div class="row align-items-center flex-column flex-md-row">
-            <div class="col-md-6 text-center text-md-start">
-                <h3>Instituto Técnico Ricaldone</h3>
-                <p>Primer año de bachillerato. ©Todos los derechos reservados.</p>
-                <ul>
-                    <li>Noe David Saravia Siliezar</li>
-                    <li>Rodrigo Alejandro Tisnado Corpeño</li>
-                    <li>Katherine Andrea Ruiz Bonilla</li>
-                    <li>Abraham Isaac Rodriguez Velasquez</li>
-                </ul>
-            </div>
-            <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                <div class="social-links">
-                    <a href="#" target="_blank" rel="noopener">
-                        <img src="img/tik-tok.png" alt="TikTok">
-                    </a>
-                    <a href="#" target="_blank" rel="noopener">
-                        <img src="img/instagram.png" alt="Instagram">
-                    </a>
-                    <a href="#" target="_blank" rel="noopener">
-                        <img src="img/facebook.png" alt="Facebook">
-                    </a>
-                </div>
-            </div>
-        </div>
+<footer class="footer">
+  <div class="container footer-container">
+
+    <!-- IZQUIERDA -->
+    <div class="footer-left">
+      <div class="footer-brand">
+        <img src="img/iconofooter.ico" alt="" class="footer-logo">
+        <h3>Siguenos en nuestras redes sociales</h3>
+      </div>
+      <div class="footer-socials">
+        <a href="#" target="_blank" rel="noopener"><img src="img/instagram.png" alt="Instagram"></a>
+        <a href="#" target="_blank" rel="noopener"><img src="img/facebook.png" alt="Facebook"></a>
+        <a href="#" target="_blank" rel="noopener"><img src="img/tik-tok.png" alt="TikTok"></a>
+      </div>
     </div>
+
+    <!-- CENTRO -->
+    <div class="footer-center">
+      <h4><a href="Pages/Contactanos.html" class="footer-link">Contáctanos</a></h4>
+      <p class="footer-info">📧 socialclockitr@gmail.com</p>
+      <p class="footer-info">📍 Carretera Troncal del Norte km 3 1/2, Col. San Joaquín Oriente, Calle A #58, San Salvador Centro, El Salvador.</p>
+    </div>
+
+    <!-- DERECHA -->
+    <div class="footer-right">
+      <p>© 2025 Social Clock. <br> Todos los derechos reservados.</p>
+      <ul>
+        <li>Noe David Saravia Siliezar</li>
+        <li>Rodrigo Alejandro Tisnado Corpeño</li>
+        <li>Katherine Andrea Ruiz Bonilla</li>
+        <li>Abraham Isaac Rodriguez Velasquez</li>
+      </ul>
+    </div>
+
+  </div>
 </footer>
 
 <script>
