@@ -346,5 +346,177 @@ h1, h2, h3 {
 p, li {
     font-weight: 400;
 }
+@media (max-width: 992px) {
+	/* Sección Redes Sociales */
+	.redes-section .d-flex {
+		gap: 40px;
+		flex-wrap: wrap;
+	}
 
+	.btn-redondo-redes {
+		width: 120px;
+		height: 120px;
+		font-size: 28px;
+		gap: 60px;
+	}
+
+	/* Sección Contacto */
+	.contacto-recuadro {
+		padding: 1.5rem;
+	}
+
+	.contacto-title {
+		font-size: 2.2rem;
+	}
+
+	.campo-redondo, .mensaje-textarea {
+		height: 50px;
+		font-size: 0.95rem;
+	}
+
+	.mensaje-textarea {
+		height: 100px;
+	}
+
+	.btn-enviar {
+		padding: 0.6rem 1.2rem;
+		font-size: 0.95rem;
+	}
+
+	/* Sección Sucursal */
+	.sucursal-text {
+		font-size: 1rem;
+	}
+}
+@media (max-width: 768px) {
+	/* Navbar */
+	.navbar-nav {
+		text-align: center;
+	}
+	.nav-link {
+		margin-right: 0;
+		margin-bottom: 0.5rem;
+	}
+
+	/* Sección Inicio */
+	.Inicio-section {
+		height: 70vh;
+		padding: 1rem;
+	}
+
+	.Inicio-text {
+		padding: 15px 20px;
+		max-width: 95%;
+	}
+
+	.Inicio-text h1 {
+		font-size: 1.8rem;
+	}
+
+	.Inicio-text p {
+		font-size: 0.95rem;
+	}
+
+	/* Sección Redes */
+	.btn-redondo-redes {
+		width: 90px;
+		height: 90px;
+		font-size: 22px;
+		gap: 40px;
+	}
+
+	/* Sección Contacto */
+	.contacto-recuadro {
+		width: 100%;
+		padding: 1rem;
+	}
+
+	.contacto-title {
+		font-size: 2rem;
+	}
+
+	.campo-redondo, .mensaje-textarea {
+		height: 45px;
+		font-size: 0.9rem;
+	}
+
+	.mensaje-textarea {
+		height: 90px;
+	}
+
+	.btn-enviar {
+		padding: 0.5rem 1rem;
+		font-size: 0.9rem;
+	}
+
+	/* Sección Sucursal */
+	.sucursal-text {
+		font-size: 0.95rem;
+	}
+
+	.img-container {
+		margin-bottom: 1rem;
+	}
+}
+
+@media (max-width: 480px) {
+	/* Sección Inicio */
+	.Inicio-section {
+		height: 60vh;
+	}
+
+	.Inicio-text h1 {
+		font-size: 1.5rem;
+	}
+
+	.Inicio-text p {
+		font-size: 0.85rem;
+	}
+
+	/* Sección Redes */
+	.btn-redondo-redes {
+		width: 70px;
+		height: 70px;
+		font-size: 18px;
+		gap: 20px;
+	}
+
+	.redes-section .d-flex {
+		gap: 20px;
+	}
+
+	/* Sección Contacto */
+	.contacto-title {
+		font-size: 1.7rem;
+		text-align: center;
+	}
+
+	.campo-redondo, .mensaje-textarea {
+		font-size: 0.85rem;
+	}
+
+	.mensaje-textarea {
+		height: 80px;
+	}
+
+	.btn-enviar {
+		padding: 0.45rem 0.9rem;
+		font-size: 0.85rem;
+	}
+
+	/* Sección Sucursal */
+	.sucursal-text {
+		font-size: 0.9rem;
+		text-align: center;
+	}
+
+	.img-container {
+		text-align: center;
+	}
+
+	.img-container img {
+		width: 100%;
+		height: auto;
+	}
+}
 

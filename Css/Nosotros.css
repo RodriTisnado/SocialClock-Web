@@ -1,12 +1,65 @@
 body {
     font-family: 'Urbanist', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Aboreto', cursive;
+}
+
+p, li, .nosotros-text, .nacio-text {
+    font-family: 'Urbanist', sans-serif;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
 .navbar, .navbar .nav-link {
     font-family: 'Urbanist', cursive !important;
     font-size: 16px;
 }
 
+.navbar {
+  transition: all 0.3s ease;
+  height: 70px;
+}
+
+.nav-link {
+  color: #0A1338 !important;
+  font-weight: 600;
+  margin-right: 1.5rem;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #5BC0EB;
+  transition: 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(10,19,56,0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
+}
+
+/* ===========================
+   SECCIÓN INICIO
+=========================== */
 .Inicio-section {
   position: relative;
   width: 100%;
@@ -28,20 +81,10 @@ body {
   z-index: 0;
 }
 
-.Inicio-content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  padding: 0 50px;
-}
-
 .Inicio-text {
   position: relative;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.8); /* recuadro oscuro */
+  background: rgba(0, 0, 0, 0.8);
   color: #fff;
   padding: 30px 40px;
   border-radius: 10px;
@@ -49,15 +92,6 @@ body {
   text-align: center;
 }
 
-.inicio-img-container {
-  flex: 0 0 300px; 
-}
-
-.inicio-img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px; 
-}
 .Inicio-text h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
@@ -68,104 +102,77 @@ body {
   margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-  .Inicio-text {
-    left: 5%;
-    padding: 20px 25px;
-    max-width: 90%;
-  }
-  
-  .Inicio-text h1 {
-    font-size: 2rem;
-  }
-
-  .Inicio-text p {
-    font-size: 1rem;
-  }
+/* ===========================
+   SECCIÓN QUIÉNES SOMOS
+=========================== */
+.nosotros-section {
+    padding: 4rem 2rem;
+    text-align: center;
 }
 
-@media (max-width: 480px) {
-  .Inicio-text h1 {
-    font-size: 1.6rem;
-  }
-
-  .Inicio-text p {
-    font-size: 0.9rem;
-  }
+.nosotros-title {
+    font-family: 'Aboreto', cursive;
+    font-size: 3rem;
+    color: #A3B5C3;
+    margin-bottom: 2rem;
 }
 
-
-.navbar {
-  transition: all 0.3s ease;
-  height: 70px;
+.nosotros-text {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
 }
 
-.nav-link {
-  color: #0A1338 !important;
-  font-weight: 600;
-  margin-right: 1.5rem;
-  position: relative;
+/* GRID DE CARDS */
+.row-nosotros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
-.nav-link::after {
-  content: '';
-  display: block;
-  height: 2px;
-  width: 0%;
-  background: #5BC0EB; /* línea azul celeste */
-  transition: 0.3s;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.nosotros-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 100%;
+.nosotros-card img {
+    width: 100%;
+    height: 280px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
 }
 
-.navbar-toggler {
-  border: none;
+.nosotros-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(10,19,56,0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
+.nosotros-card h5 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
 }
 
-h1, h2, h3, 
-.por-que-creado-title, 
-.Que-es-titulo, 
-.Por-que-titulo-importante {
-    font-family: 'Aboreto';
-}
-
-.nosotros {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  padding: 40px;
-}
-
-p, li 
-.nosotros-text{
-    font-family: 'Urbanist', sans-serif;
-    font-size: 20px;
-}
-
-.espacio-nosotros{
-    padding-top: 60px;
-}
-
-
-/* Sección Nació nuestro proyecto */
+/* ===========================
+   SECCIÓN NACIÓ NUESTRO PROYECTO
+=========================== */
 .nacio-section {
-    background-image: url('../img/Frame 32.png');
+    background-image: url('../img/Frame 38.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     padding: 6rem 2rem;
+    color: white;
 }
 
 .nacio-overlay {
@@ -180,6 +187,7 @@ p, li
     font-size: 2.8rem;
     position: relative;
     z-index: 1;
+    margin-bottom: 1rem;
 }
 
 .nacio-text {
@@ -187,22 +195,19 @@ p, li
     font-size: 1.3rem;
     position: relative;
     z-index: 1;
+    line-height: 1.6;
 }
 
-p, 
-.por-que-creado-text, 
-.Que-es-text-box, 
-.Por-que-text {
-    font-family: 'Urbanist', sans-serif;
-}
-
+/* ===========================
+   CONTENIDO OBJETIVOS, MISIÓN Y VISIÓN
+=========================== */
 .contenido-blanco {
     background-color: #FFFFFF;
     padding: 4rem 2rem;
 }
 
 .contenido-imagen {
-    width: 300px;
+    width: 100%;
     max-width: 450px;
     height: auto;
     border-radius: 12px;
@@ -210,128 +215,46 @@ p,
     margin: 0 auto;
 }
 
-/* Recuadros de contenido */
 .contenido-recuadro {
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.contenido-recuadro:hover{
-    transform: scale(1.1);
+    padding: 2rem;
 }
 
-/* Objetivos */
-.objetivos-recuadro {
-    background-color: #D9C8B7;
+.contenido-recuadro:hover {
+    transform: scale(1.05);
 }
 
-/* Misión */
-.mision-recuadro {
-    background-color: #F5EBE0;
-}
+/* Colores recuadros */
+.objetivos-recuadro { background-color: #D9C8B7; color: #000; }
+.mision-recuadro { background-color: #F5EBE0; color: #000; }
+.vision-recuadro { background-color: #D9C8B7; color: #000; }
 
-/* Visión */
-.vision-recuadro {
-    background-color: #D9C8B7;
-}
-
-.h2 ,.objetivos-recuadro, .vision-recuadro{
-    color: #FFFFFF;
-}
-/* Títulos de recuadro */
 .contenido-recuadro h2 {
     font-family: 'Aboreto';
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-
-
-/* Texto de recuadro */
-.contenido-recuadro p, li {
+.contenido-recuadro p, .contenido-recuadro li {
     font-family: 'Urbanist', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.6;
-    color: black;
 }
 
-.nacio-section {
-    background-image: url('../img/Frame\ 38.png'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    padding: 6rem 2rem;
-}
-
-.nacio-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.55); /* recuadro negro translúcido */
-    z-index: 0;
-}
-
-.nacio-title {
-    font-family: 'Aboreto', cursive;
-    font-size: 2.8rem;
-    position: relative;
-    z-index: 1;
-}
-
-.nacio-text {
-    font-family: 'Urbanist', sans-serif;
-    font-size: 1.3rem;
-    position: relative;
-    z-index: 1;
-}
-
-.nosotros-title {
-    font-family: 'Aboreto', cursive;
-    font-size: 3rem;
-    color: #A3B5C3; /* celeste */
-    position: relative;
-    z-index: 1;
-}
-
-.nosotros-card {
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  text-align: center;
-  padding: 25px;
-  width: 280px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.nosotros-card img {
-    width: 85%;
-     height: 280px;
-    border-radius: 12px;
-    object-fit: cover;
-    margin-bottom: 15px;
-    transition: transform 0.4s ease;
-}
-
-.nosotros-card:hover {
-  transform: scale(1.08);;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
-
+/* ===========================
+   FOOTER
+=========================== */
 .site-footer {
-    background-color: #4A6080; /* azul oscuro */
+    background-color: #4A6080;
     color: #FFFFFF;
     padding: 3rem 2rem;
 }
 
-.site-footer h3 {
-    margin-bottom: 1rem;
-    font-family: 'Aboreto',;
-}
-
-.site-footer p {
-    margin-bottom: 0.5rem;
+.site-footer h3,
+.site-footer p,
+.site-footer ul li {
     font-family: 'Urbanist', sans-serif;
 }
 
@@ -358,26 +281,92 @@ p,
     transform: scale(1.2);
 }
 
-.site-footer p,
-.site-footer ul li {
-    font-family: 'Urbanist', sans-serif;
-    font-size: 1.1rem; 
-    margin-bottom: 0.5rem;
-    color: #FFFFFF;
+/* GRID DE CARDS */
+.row-nosotros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.site-footer ul {
-    padding-left: 1rem;
-}
-
-.site-footer h5 {
-    margin-bottom: 1rem;
-    font-family: 'Aboreto';
-    font-size: 1.8rem; 
-}
-
-.separador-Testimonios {
-    background-color: #FFFFFF; /* espacio blanco */
-    height: 50px; 
+.nosotros-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+    padding: 15px;
     width: 100%;
+    max-width: 220px; /* ancho máximo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.nosotros-card img {
+    width: 100%;
+    height: 200px; /* altura proporcional */
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.4s ease;
+}
+
+.nosotros-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.nosotros-card h5 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nosotros-card {
+        max-width: 180px;
+    }
+    .nosotros-card img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nosotros-card {
+        max-width: 140px;
+    }
+    .nosotros-card img {
+        height: 120px;
+    }
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 992px) {
+    .nosotros-card { width: 220px; }
+    .contenido-imagen { max-width: 350px; }
+}
+
+@media (max-width: 768px) {
+    .Inicio-text { padding: 20px 25px; max-width: 90%; }
+    .Inicio-text h1 { font-size: 2rem; }
+    .Inicio-text p { font-size: 1rem; }
+
+    .nosotros-title { font-size: 2.2rem; }
+    .nosotros-text { font-size: 1rem; max-width: 90%; }
+    .nosotros-card img { height: 220px; }
+
+    .contenido-imagen { max-width: 300px; }
+}
+
+@media (max-width: 480px) {
+    .Inicio-text h1 { font-size: 1.6rem; }
+    .Inicio-text p { font-size: 0.9rem; }
+
+    .nosotros-title { font-size: 1.8rem; }
+    .nosotros-text { font-size: 0.9rem; }
+    .nosotros-card img { height: 180px; }
+
+    .contenido-imagen { max-width: 250px; }
 }

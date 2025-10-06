@@ -1,6 +1,50 @@
+/* ===========================
+   FUENTES Y NAVBAR
+=========================== */
 .navbar, .navbar .nav-link {
     font-family: 'Urbanist', cursive !important;
 }
+
+.navbar {
+  transition: all 0.3s ease;
+  height: 70px;
+}
+
+.nav-link {
+  color: #0A1338 !important;
+  font-weight: 600;
+  margin-right: 1.5rem;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #5BC0EB;
+  transition: 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(10,19,56,0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
+}
+
+/* ===========================
+   SECCIÓN INICIO / HERO
+=========================== */
 .Inicio-section {
   position: relative;
   width: 100%;
@@ -22,20 +66,10 @@
   z-index: 0;
 }
 
-.Inicio-content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  padding: 0 50px;
-}
-
 .Inicio-text {
   position: relative;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.8); /* recuadro oscuro */
+  background: rgba(0, 0, 0, 0.8);
   color: #fff;
   padding: 30px 40px;
   border-radius: 10px;
@@ -43,15 +77,6 @@
   text-align: center;
 }
 
-.inicio-img-container {
-  flex: 0 0 300px; 
-}
-
-.inicio-img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px; 
-}
 .Inicio-text h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
@@ -62,101 +87,25 @@
   margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-  .Inicio-text {
-    left: 5%;
-    padding: 20px 25px;
-    max-width: 90%;
-  }
-  
-  .Inicio-text h1 {
-    font-size: 2rem;
-  }
-
-  .Inicio-text p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .Inicio-text h1 {
-    font-size: 1.6rem;
-  }
-
-  .Inicio-text p {
-    font-size: 0.9rem;
-  }
-}
-
-
-.navbar {
-  transition: all 0.3s ease;
-  height: 70px;
-}
-
-.nav-link {
-  color: #0A1338 !important;
-  font-weight: 600;
-  margin-right: 1.5rem;
-  position: relative;
-}
-
-.nav-link::after {
-  content: '';
-  display: block;
-  height: 2px;
-  width: 0%;
-  background: #5BC0EB; /* línea azul celeste */
-  transition: 0.3s;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 100%;
-}
-
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(10,19,56,0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
-}
-  
-h1, h2, h3, 
-.por-que-creado-title, 
-.Que-es-titulo, 
-.Por-que-titulo-importante {
-    font-family: 'Aboreto';
-}
-
-p, 
-.por-que-creado-text, 
-.Que-es-text-box, 
-.Por-que-text {
-    font-family: 'Urbanist', sans-serif;
-}
-
-/* Sección de bienvenida y botones */
+/* ===========================
+   SECCIÓN BIENVENIDA Y BOTONES
+=========================== */
 .bienvenida {
-    background-color: var(--dark-blue); 
-    color: var(--white);
+    background-color: #FFFFFF;
+    color: #4A6080;
     padding: 4rem 2rem;
     text-align: center;
-    width: 100%; 
+    width: 100%;
 }
 
 .bienvenida h1 {
-    color: #728297; 
+    color: #4A6080;
     margin-bottom: 1rem;
     font-size: 2.5rem;
 }
 
 .bienvenida p {
-    color: var(--white);
+    color: #000000;
     font-size: 1.25rem;
 }
 
@@ -165,7 +114,6 @@ p,
     margin-top: 2rem;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
     flex-wrap: wrap;
     gap: 120px;
 }
@@ -179,49 +127,44 @@ p,
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: var(--white);
-    background-color: #C4B3A3; 
+    color: #000000;
+    background-color: #C4B3A3;
     transition: transform .25s, box-shadow .25s;
     box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     text-align: center;
 }
 
-
-.btn-redondo:hover { transform: translateY(-6px); }
+.btn-redondo:hover {
+    transform: translateY(-6px);
+}
 
 .btn-redondo .btn-icon {
     font-size: 40px;
     margin-bottom: .4rem;
-    display: block;
 }
 
-/* Responsive */
-@media (max-width: 576px) {
-    .logo-socialclock { max-width: 250px; }
-    .btn-redondo { width: 120px; height: 120px; }
-    .btn-redondo .btn-icon { font-size: 28px; }
-}
-
-/* Sección ¿Qué es Social Clock? */
+/* ===========================
+   SECCIÓN ¿QUÉ ES SOCIAL CLOCK?
+=========================== */
 .what-is-section {
-    background-image: url('../img/Frame\ 30\ \(1\).png');
+    background-image: url('../img/Frame 30 (1).png'); /* fondo original */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     color: #FFFFFF;
     min-height: 500px;
-    
-    display: flex;           
-    flex-direction: column;    
-    justify-content: center;   
-    padding: 0 2rem;         
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
 }
+
 .what-is-section::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.4); 
+    background: rgba(0,0,0,0.4);
     z-index: 0;
 }
 
@@ -233,22 +176,25 @@ p,
 }
 
 .what-is-title {
-    font-size: 2.8rem;  
+    font-size: 2.8rem;
     margin-bottom: 1rem;
 }
 
+.what-is-text-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2.5rem 1.8rem;
+    border-radius: 15px;
+    color: #ffffff;
+}
+
 .what-is-text-box p {
-    font-size: 1.3rem; 
+    font-size: 1.3rem;
     line-height: 1.6;
 }
 
-.what-is-text-box {
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 2.5rem 1.8rem;              
-    border-radius: 15px;                 
-    color: #ffffff;                      
-}
-
+/* ===========================
+   POR QUÉ FUE CREADO
+=========================== */
 .por-que-creado-section {
     background-color: #FFFFFF;
     padding: 4rem 2rem;
@@ -256,61 +202,72 @@ p,
 
 .por-que-creado-title {
     color: #A3B5C3;
-    font-size: 2.8rem;  
+    font-size: 2.8rem;
     margin-bottom: 1.5rem;
 }
 
 .por-que-creado-text {
     color: #000000;
-    font-size: 1.4rem;  
+    font-size: 1.4rem;
     line-height: 1.6;
 }
 
 .por-que-creado-image {
     width: 300px;
-    max-width: 450px;   
+    max-width: 450px;
     height: auto;
     border-radius: 8px;
-    margin-left: auto; 
+    margin-left: auto;
     display: block;
 }
 
+/* ===========================
+   POR QUÉ ES IMPORTANTE
+=========================== */
 .por-que-importante-section {
-    background-color: #0A1338; 
+    background-color: #0A1338;
     padding: 4rem 2rem;
     color: #FFFFFF;
 }
 
 .por-que-importante-title {
-    color: #C4B3A3; 
-    font-size: 2.8rem; 
+    color: #C4B3A3;
+    font-size: 2.8rem;
     margin-bottom: 1.5rem;
-    font-family: 'Aboreto';
 }
 
 .por-que-importante-text {
-    color: #FFFFFF; 
     font-size: 1.4rem;
     line-height: 1.6;
-    font-family: 'Urbanist', sans-serif;
 }
 
 .por-que-importante-image {
     width: 300px;
-    max-width: 450px; 
+    max-width: 450px;
     height: auto;
     border-radius: 8px;
-    margin-left: 30px; 
+    margin-left: 30px;
     display: block;
 }
 
+/* ===========================
+   TESTIMONIOS
+=========================== */
+
+.separador-testimonios{
+  background-color: #FFFFFF; /* espacio blanco */
+  height: 50px; 
+  width: 100%;
+}
+
+
 .testimonios-section {
     position: relative;
-    background-image: url('../img/Frame\ 34.png'); 
+    background-image: url('../img/Frame 34.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 6rem 2rem 4rem; 
+    padding: 6rem 2rem 4rem;
     color: #FFFFFF;
 }
 
@@ -318,7 +275,7 @@ p,
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.45); /* overlay para mejorar legibilidad */
+    background: rgba(0,0,0,0.45);
     z-index: 0;
 }
 
@@ -328,7 +285,7 @@ p,
     font-size: 3rem;
     margin-bottom: 2rem;
     position: relative;
-    z-index: 1; /* encima del overlay */
+    z-index: 1;
     color: #C4B3A3;
 }
 
@@ -338,7 +295,7 @@ p,
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem; 
+    gap: 2rem;
 }
 
 .testimonial-card {
@@ -350,25 +307,25 @@ p,
     text-align: center;
     box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-.testimonial-card:hover{
+.testimonial-card:hover {
     transform: scale(1.1);
 }
+
+/* ===========================
+   FOOTER
+=========================== */
 .site-footer {
-    background-color: #4A6080; /* azul oscuro */
+    background-color: #4A6080;
     color: #FFFFFF;
     padding: 3rem 2rem;
 }
 
-.site-footer h3 {
-    margin-bottom: 1rem;
-    font-family: 'Aboreto',;
-}
-
-.site-footer p {
-    margin-bottom: 0.5rem;
+.site-footer h3,
+.site-footer p,
+.site-footer ul li {
     font-family: 'Urbanist', sans-serif;
 }
 
@@ -395,25 +352,38 @@ p,
     transform: scale(1.2);
 }
 
-.site-footer p,
-.site-footer ul li {
-    font-family: 'Urbanist', sans-serif;
-    font-size: 1.1rem; 
-    margin-bottom: 0.5rem;
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 992px) {
+    .por-que-creado-section .row,
+    .por-que-importante-section .row {
+        flex-direction: column;
+    }
+
+    .por-que-creado-image,
+    .por-que-importante-image {
+        margin: 1rem auto;
+    }
+
+    .Inicio-text {
+        max-width: 90%;
+        padding: 20px 25px;
+    }
+
+    .Inicio-text h1 { font-size: 2rem; }
+    .Inicio-text p { font-size: 1rem; }
+
+    .what-is-title { font-size: 2rem; text-align: center; }
+    .what-is-text-box p { font-size: 1rem; text-align: center; }
 }
 
-.site-footer ul {
-    padding-left: 1rem;
-}
-
-.site-footer h5 {
-    margin-bottom: 1rem;
-    font-family: 'Aboreto';
-    font-size: 1.8rem; 
-}
-
-.separador-Testimonios {
-    background-color: #FFFFFF; 
-    height: 50px; 
-    width: 100%;
-}
+@media (max-width: 576px) {
+    .btn-redondo { width: 120px; height: 120px; }
+    .btn-redondo .btn-icon { font-size: 28px; }
+    .bienvenida h1 { font-size: 2rem; }
+    .bienvenida p { font-size: 1rem; }
+  }
+    
+    
