@@ -32,7 +32,7 @@
 .Inicio-text {
   position: relative;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.8); /* recuadro oscuro */
+  background: rgba(0, 0, 0, 0.5); /* recuadro oscuro */
   color: #fff;
   padding: 30px 40px;
   border-radius: 10px;
@@ -280,12 +280,16 @@
     transform: scale(1.2);
 }
 
+ul{
+    list-style-type: none;
+}
 .social-links a img {
-    width: 128px; 
-    height: 128px;
+    width: 90px; 
+    height: 90px;
     filter: brightness(0) invert(1);
     transition: transform 0.2s;
 }
+
 
 .social-links a img:hover {
     transform: scale(1.2);
@@ -518,5 +522,23 @@ p, li {
 		width: 100%;
 		height: auto;
 	}
+}
+.sucursal-section {
+  background-color: #FFFFFF;
+  color:#4A6080;
+}
+
+.sucursal-text {
+  text-align: justify;
+  padding: 1rem 2rem;
+  color:#A3B5C3; 
+  font-size:1.5rem;
+}
+
+@media (max-width: 768px) {
+  .sucursal-text {
+    text-align: center;
+    padding: 1rem 0;
+  }
 }
 

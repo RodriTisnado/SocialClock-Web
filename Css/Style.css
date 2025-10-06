@@ -341,9 +341,12 @@
     transform: scale(1.2);
 }
 
+ul{
+    list-style-type: none;
+}
 .social-links a img {
-    width: 128px; 
-    height: 128px;
+    width: 90px; 
+    height: 90px;
     filter: brightness(0) invert(1);
     transition: transform 0.2s;
 }

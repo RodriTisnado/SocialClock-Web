@@ -116,7 +116,7 @@
 }
 
 .flecha-abajo {
-  font-size: 2rem;
+  font-size: 3rem;
   animation: moverFlecha 1s infinite alternate;
   margin-bottom: 2rem;
   color: #0A1338;
@@ -131,7 +131,10 @@
   position: relative;
   width: 100%;
   padding: 6rem 2rem;
-  background-image: url(../img/Frame\ 30.png);
+  background-image: url('../img/Frame 30.png');
+  background-size: cover;       
+  background-position: center;
+  background-repeat: no-repeat; 
   color: #FFFFFF;
   display: flex;
   justify-content: center;
@@ -141,16 +144,21 @@
   overflow: hidden;
 }
 
+.separador-testimonios{
+  background-color: #FFFFFF; /* espacio blanco */
+  height: 50px; 
+  width: 100%;
+}
 
 .sistema-administrativo-recuadro {
   position: relative;
   z-index: 1;
-  background: rgba(10, 19, 56, 0.8);
-  padding: 3rem 2rem;
-  border-radius: 16px;
-  max-width: 850px;
-  margin: 0 auto;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.5); /* recuadro oscuro */
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  max-width: 700px;
+  text-align: center;
 }
 
 .sistema-administrativo-recuadro h2 {
@@ -298,12 +306,17 @@ strong {
     transform: scale(1.2);
 }
 
+
+ul{
+    list-style-type: none;
+}
 .social-links a img {
-    width: 128px; 
-    height: 128px;
+    width: 90px; 
+    height: 90px;
     filter: brightness(0) invert(1);
     transition: transform 0.2s;
 }
+
 
 .social-links a img:hover {
     transform: scale(1.2);
