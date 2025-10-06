@@ -1,55 +1,5 @@
-/* ===========================
-   SISTEMA.CSS COMPLETO CON RESPONSIVE
-=========================== */
-
-/* Fuentes */
 .navbar, .navbar .nav-link {
-    font-family: 'Urbanist', cursive !important;
-}
-
-/* ===========================
-   INICIO
-=========================== */
-.Inicio-section {
-  position: relative;
-  width: 100%;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.inicio-fondo-picture,
-.inicio-fondo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.Inicio-text {
-  position: relative;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  padding: 30px 40px;
-  border-radius: 10px;
-  max-width: 700px;
-  text-align: center;
-}
-
-.Inicio-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-}
-
-.Inicio-text p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
+  font-family: 'Urbanist', sans-serif !important;
 }
 
 /* ===========================
@@ -92,277 +42,255 @@
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(10,19,56,0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
 }
 
-/* ===========================
-   SECCIÓN SISTEMA
-=========================== */
-.sistema-section {
-    padding: 6rem 2rem;
-    text-align: center;
-}
-
-.sistema-mensaje p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.sistema-mensaje h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.flecha-abajo {
-    font-size: 2rem;
-    animation: moverFlecha 1s infinite alternate;
-    margin-bottom: 2rem;
-}
-
-@keyframes moverFlecha {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(10px); }
-}
-
-/* ===========================
-   SISTEMA ADMINISTRATIVO
-=========================== */
-.sistema-administrativo-section {
-    position: relative;
-    width: 100%;
-    padding: 6rem 2rem;
-}
-
-.sistema-administrativo-fondo {
-    background-image: url('../img/Frame\ 38.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding: 4rem 2rem;
-}
-
-.sistema-administrativo-fondo::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 0;
-}
-
-.sistema-administrativo-recuadro {
-    position: relative;
-    z-index: 1;
-    background-color: rgba(10,19,56,0.85);
-    padding: 3rem 2rem;
-    border-radius: 15px;
-    max-width: 900px;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-.sistema-administrativo-recuadro h2 {
-    font-family: 'Aboreto', cursive;
-    font-size: 2.8rem;
-    margin-bottom: 1.5rem;
-}
-
-.sistema-administrativo-recuadro p {
-    font-family: 'Urbanist', sans-serif;
-    font-size: 1.3rem;
-    line-height: 1.6;
-}
-
-.btn-descargar {
-    display: inline-block;
-    background: linear-gradient(to left, #C4B3A3, #D9C8B7, #A3B5C3, #A3B5C3);
-    color: #FFFFFF;
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 600;
-    font-size: 1.2rem;
-    padding: 0.8rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
-    margin-top: 2rem;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.btn-descargar:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-}
-
-/* ===========================
-   CARACTERÍSTICAS, CARRUSEL Y REQUERIMIENTOS
-=========================== */
-.caracteristicas-titulo-section {
-    background-color: #FFFFFF;
-    padding: 4rem 2rem;
-}
-
-.caracteristicas-titulo-section h2 {
-    font-family: 'Aboreto', cursive;
-    font-size: 3rem;
-    color: #728297;
-}
-
-.carousel-img {
-    max-width: 100%;
-    max-height: 400px;
-    object-fit: contain;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    top: 70%;
-    transform: translateY(-50%);
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0,0,0,0.5);
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-}
-
-.carousel-indicators button {
-    background-color: #5BC0EB;
-    width: 12px;
-    height: 12px;
-    border-radius: 0%;
-    opacity: 1;
-}
-
-.requerimientos-section {
-    background-image: url('../img/Frame\ 38.png');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    padding: 6rem 2rem;
-    color: #FFFFFF;
-    text-align: center;
-}
-
-.requerimientos-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 0;
-}
-
-.requerimientos-section h2 {
-    font-size: 3rem;
-    margin-bottom: 3rem;
-    position: relative;
-    z-index: 1;
-}
-
-.requerimientos-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 1;
-}
-
-.requerimiento-card {
-    background-color: rgba(10,19,56,0.8);
-    padding: 2rem;
-    border-radius: 12px;
-    flex: 1 1 300px;
-    max-width: 350px;
-    text-align:center;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.requerimiento-card:hover {
-    transform: scale(1.1);
-}
-
-.requerimiento-card img {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-    vertical-align: middle;
-}
-
-.requerimiento-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.requerimiento-card p {
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-/* ===========================
-   APARTADOS GESTIÓN, PROYECTOS, ADMIN, ESTADÍSTICAS
-=========================== */
-.gestion-estudiantes .gestion-titulo,
-.proyectos-titulo,
-.administracion-titulo,
-.estadisticas-titulo {
-    font-family: 'Aboreto', cursive;
-    text-align: center;
-    padding: 2rem 1rem;
-}
-.gestion-titulo{
-    background-color: #0A1338;
-    color: #FFFFFF;
-}
 .proyectos-titulo{
     background-color: #4A6080;
-    color:#FFFFFF
+    color: #FFFFFF;
 }
 
 .administracion-titulo{
-    background-color: #728297;
-    color: #FFFFFF;
-}
-
-.estadisticas-titulo{
     background-color: #A3B5C3;
     color: #FFFFFF;
 }
 
-.gestion-estudiantes .gestion-titulo h2,
-.proyectos-titulo h2,
-.administracion-titulo h2,
-.estadisticas-titulo h2 {
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-.gestion-estudiantes .gestion-contenido,
-.proyectos-contenido,
-.administracion-contenido,
-.estadisticas-contenido {
-    display: flex;
-    justify-content: center;
-    background-color: #FFFFFF;
-    padding: 2rem;
-}
-
-.recuadro-gris {
-    background-color: #F6F6F6;
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 800px;
-    width: 100%;
-    font-family: 'Urbanist', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #0A1338;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+.estadisticas-titulo{
+    background-color: #C4B3A3;
+    color: #FFFFFF;
 }
 
 /* ===========================
-   FOOTER
+   INICIO
 =========================== */
+.Inicio-section {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.inicio-fondo-picture,
+.inicio-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.Inicio-text {
+  position: relative;
+  z-index: 1;
+  background: rgba(10, 19, 56, 0.8);
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.Inicio-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-family: 'Aboreto', cursive;
+}
+
+.Inicio-text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-family: 'Urbanist', sans-serif;
+}
+
+/* ===========================
+   SECCIÓN SISTEMA
+=========================== */
+.sistema-section {
+  padding: 6rem 2rem 3rem 2rem;
+  text-align: center;
+}
+
+.sistema-mensaje p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.sistema-mensaje h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Aboreto', cursive;
+}
+
+.flecha-abajo {
+  font-size: 2rem;
+  animation: moverFlecha 1s infinite alternate;
+  margin-bottom: 2rem;
+  color: #0A1338;
+}
+
+@keyframes moverFlecha {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(10px); }
+}
+
+/* ===========================
+   SISTEMA ADMINISTRATIVO (REDISEÑADO)
+=========================== */
+.sistema-administrativo-section {
+  position: relative;
+  width: 100%;
+  padding: 6rem 2rem;
+  background-image: url(../img/Frame\ 30.png);
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+.sistema-administrativo-recuadro {
+  position: relative;
+  z-index: 1;
+  background: rgba(10, 19, 56, 0.8);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  max-width: 850px;
+  margin: 0 auto;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.sistema-administrativo-recuadro h2 {
+  font-family: 'Aboreto', cursive;
+  font-size: 2.6rem;
+  margin-bottom: 1.2rem;
+  color: #FFFFFF;
+}
+
+.sistema-administrativo-recuadro p {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #E8E8E8;
+}
+
+.btn-descargar {
+  display: inline-block;
+  background: linear-gradient(90deg, #C4B3A3, #A3B5C3);
+  color: #FFFFFF;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-descargar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(255,255,255,0.2);
+}
+
+.gestion-titulo{
+    background-color: #0A1338;
+    color: #FFFFFF;
+}
+
+/* ===========================
+   REQUERIMIENTOS / CARRUSEL
+=========================== */
+.requerimientos-section {
+  background-image: url('../img/Frame 38.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 6rem 2rem;
+  color: #FFFFFF;
+  text-align: center;
+  overflow: hidden;
+}
+
+.requerimientos-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 0;
+}
+
+.requerimientos-section h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+  font-family: 'Aboreto', cursive;
+}
+
+.requerimientos-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.requerimiento-card {
+  background-color: rgba(10,19,56,0.85);
+  padding: 2rem;
+  border-radius: 12px;
+  flex: 1 1 300px;
+  max-width: 340px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.requerimiento-card:hover {
+  transform: scale(1.05);
+}
+
+.requerimiento-card img {
+  display: block;
+  margin: 0 auto 1rem auto;
+  vertical-align: middle;
+  width: 80px;
+}
+
+.requerimiento-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.requerimiento-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ===========================
+   TEXTOS GENERALES
+=========================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Aboreto', cursive;
+  font-weight: 600;
+}
+
+p, li {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400;
+}
+
+strong {
+  color: #4A6080;
+}
+
 .site-footer {
     background-color: #4A6080;
     color: #FFFFFF;
@@ -398,70 +326,59 @@
     transform: scale(1.2);
 }
 
-
-/* ===========================
-   FUERTES
-=========================== */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Aboreto', cursive;
-    font-weight: 600;
+.separador-testimonios{
+  background-color: #FFFFFF; /* espacio blanco */
+  height: 50px; 
+  width: 100%;
 }
 
-p, li {
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 400;
-}
-
-strong {
-    color: #4A6080;
-}
-
-/* ===========================
-   SEPARADORES
-=========================== */
-.separador-Testimonios {
-    background-color: #FFFFFF;
-    height: 50px;
-    width: 100%;
-}
 
 /* ===========================
    RESPONSIVE
 =========================== */
 @media (max-width: 992px) {
-    .Inicio-text, 
-    .sistema-administrativo-recuadro, 
-    .requerimiento-card,
-    .recuadro-gris {
-        max-width: 90%;
-        margin: 1rem auto;
-    }
-
-    .carousel-img {
-        max-height: 300px;
-    }
+  .Inicio-text, 
+  .sistema-administrativo-recuadro, 
+  .requerimiento-card {
+    max-width: 90%;
+    margin: 1rem auto;
+  }
 }
 
 @media (max-width: 768px) {
-    .Inicio-text { padding: 20px 25px; font-size: 1rem; }
-    .Inicio-text h1 { font-size: 2rem; }
-    .Inicio-text p { font-size: 1rem; }
+  .Inicio-text { padding: 20px 25px; font-size: 1rem; }
+  .Inicio-text h1 { font-size: 2rem; }
+  .Inicio-text p { font-size: 1rem; }
 
-    .sistema-mensaje h2 { font-size: 2rem; }
-    .sistema-mensaje p { font-size: 1rem; }
+  .sistema-mensaje h2 { font-size: 2rem; }
+  .sistema-mensaje p { font-size: 1rem; }
 
-    .recuadro-gris { padding: 1.5rem; font-size: 1.1rem; }
-    .carousel-img { max-height: 250px; }
+  .sistema-administrativo-recuadro { padding: 2rem 1.5rem; }
+  .sistema-administrativo-recuadro h2 { font-size: 2rem; }
+  .sistema-administrativo-recuadro p { font-size: 1rem; }
 }
 
 @media (max-width: 480px) {
-    .Inicio-text { padding: 15px 20px; font-size: 0.9rem; }
-    .Inicio-text h1 { font-size: 1.6rem; }
-    .Inicio-text p { font-size: 0.9rem; }
+  .Inicio-text { padding: 15px 20px; font-size: 0.9rem; }
+  .Inicio-text h1 { font-size: 1.6rem; }
+  .Inicio-text p { font-size: 0.9rem; }
 
-    .sistema-mensaje h2 { font-size: 1.6rem; }
-    .sistema-mensaje p { font-size: 0.9rem; }
+  .sistema-mensaje h2 { font-size: 1.6rem; }
+  .sistema-mensaje p { font-size: 0.9rem; }
 
-    .recuadro-gris { padding: 1rem; font-size: 1rem; }
-    .carousel-img { max-height: 200px; }
+  .sistema-administrativo-recuadro { padding: 1.5rem; }
+}
+
+/* ===========================
+   FIX DESPLAZAMIENTO MÓVIL
+=========================== */
+html, body {
+  overflow-x: hidden;
+}
+
+.Inicio-section,
+.sistema-section,
+.sistema-administrativo-section {
+  max-width: 100%;
+  overflow-x: hidden;
 }
