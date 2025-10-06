@@ -2,9 +2,6 @@
   font-family: 'Urbanist', sans-serif !important;
 }
 
-/* ===========================
-   NAVBAR
-=========================== */
 .navbar {
   transition: all 0.3s ease;
   height: 70px;
@@ -57,9 +54,6 @@
     color: #FFFFFF;
 }
 
-/* ===========================
-   INICIO
-=========================== */
 .Inicio-section {
   position: relative;
   width: 100%;
@@ -105,9 +99,6 @@
   font-family: 'Urbanist', sans-serif;
 }
 
-/* ===========================
-   SECCIÓN SISTEMA
-=========================== */
 .sistema-section {
   padding: 6rem 2rem 3rem 2rem;
   text-align: center;
@@ -136,9 +127,6 @@
   100% { transform: translateY(10px); }
 }
 
-/* ===========================
-   SISTEMA ADMINISTRATIVO (REDISEÑADO)
-=========================== */
 .sistema-administrativo-section {
   position: relative;
   width: 100%;
@@ -203,9 +191,6 @@
     color: #FFFFFF;
 }
 
-/* ===========================
-   REQUERIMIENTOS / CARRUSEL
-=========================== */
 .requerimientos-section {
   background-image: url('../img/Frame 38.png');
   background-size: cover;
@@ -226,7 +211,7 @@
 }
 
 .requerimientos-section h2 {
-  font-size: 3rem;
+  font-size: 2.3rem;
   margin-bottom: 3rem;
   position: relative;
   z-index: 1;
@@ -274,9 +259,7 @@
   line-height: 1.6;
 }
 
-/* ===========================
-   TEXTOS GENERALES
-=========================== */
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Aboreto', cursive;
   font-weight: 600;
@@ -333,9 +316,7 @@ strong {
 }
 
 
-/* ===========================
-   RESPONSIVE
-=========================== */
+/*Responsive*/
 @media (max-width: 992px) {
   .Inicio-text, 
   .sistema-administrativo-recuadro, 
@@ -369,9 +350,6 @@ strong {
   .sistema-administrativo-recuadro { padding: 1.5rem; }
 }
 
-/* ===========================
-   FIX DESPLAZAMIENTO MÓVIL
-=========================== */
 html, body {
   overflow-x: hidden;
 }
@@ -381,4 +359,72 @@ html, body {
 .sistema-administrativo-section {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+.carousel {
+  margin: 3rem auto;
+  max-width: 800px; /* limita el tamaño total */
+}
+
+.carousel-inner {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.carousel-img {
+  width: 100%;
+  max-width: 700px; /* controla el tamaño */
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 90%;
+  }
+
+  .carousel-img {
+    max-width: 100%;
+  }
+}
+
+.requerimiento-card {
+  text-align: left;
+  color: #fff;
+  font-size: 0.95rem;
+  padding: 1.8rem;
+  border-radius: 12px;
+  background-color: rgba(10,19,56,0.85);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.requerimiento-card ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.requerimiento-card li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .requerimientos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .requerimiento-card {
+    width: 90%;
+    font-size: 0.9rem;
+    padding: 1.2rem;
+  }
+
+  .requerimiento-card h3 {
+    font-size: 1.2rem;
+  }
 }
